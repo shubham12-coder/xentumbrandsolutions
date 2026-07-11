@@ -284,7 +284,7 @@ const handleSubmit = async (e: any) => {
   </p>
 
   <a
-    href='https://maps.google.com/?q=249+Phase+IV+Udyog+Vihar+Sector+19+Gurugram'
+    href='https://maps.app.goo.gl/ybg71XqeGcMQ9J9U9'
     target='_blank'
     rel='noopener noreferrer'
     className='inline-block bg-yellow-500 text-black px-6 py-3 rounded-xl font-bold hover:scale-105 transition-all duration-300'
