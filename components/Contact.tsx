@@ -34,10 +34,40 @@ const handleSubmit = async (e: any) => {
 }
 
   return (
+  <>
+  
+  {success && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+    <div className="bg-white rounded-3xl p-8 max-w-md w-[90%] text-center shadow-2xl">
+
+      <div className="text-6xl mb-4">✅</div>
+
+      <h3 className="text-3xl font-bold text-green-600 mb-3">
+        Thank You!
+      </h3>
+
+      <p className="text-gray-600 mb-6">
+        Your message has been sent successfully.
+        <br />
+        We'll get back to you shortly.
+      </p>
+
+      <button
+        onClick={() => setSuccess(false)}
+        className="bg-yellow-500 text-black px-6 py-3 rounded-xl font-bold"
+      >
+        Close
+      </button>
+
+    </div>
+  </div>
+)}
+
     <section
-      id='contact'
-      className='py-24 md:py-32 bg-white text-black'
-    >
+  id='contact'
+  className='py-24 md:py-32 bg-white text-black'
+>
+
       <div className='max-w-6xl mx-auto px-4 md:px-6'>
 
         {/* HEADING */}
@@ -202,12 +232,6 @@ const handleSubmit = async (e: any) => {
   {loading ? 'Sending...' : 'Send Message'}
 </button>
 
-{success && (
-  <div className='bg-green-100 text-green-700 p-4 rounded-xl text-center font-semibold'>
-    ✅ Thank you! Your message has been sent successfully.
-  </div>
-)}
-
 </form>
 
           </div>
@@ -265,7 +289,9 @@ const handleSubmit = async (e: any) => {
 
         </div>
 
-      </div>
+            </div>
     </section>
+
+  </>
   )
 }
