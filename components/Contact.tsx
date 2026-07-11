@@ -26,9 +26,14 @@ const handleSubmit = async (e: any) => {
   )
 
   if (response.ok) {
-    setSuccess(true)
-    e.target.reset()
-  }
+  setSuccess(true)
+  e.target.reset()
+
+  setTimeout(() => {
+    setSuccess(false)
+  }, 3000)
+}
+
 
   setLoading(false)
 }
