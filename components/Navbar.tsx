@@ -19,16 +19,17 @@ export default function Navbar() {
 
   return (
     <header className='fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200 shadow-sm'>
-      <div className='max-w-7xl mx-auto px-4 md:px-6 h-20 flex items-center justify-between'>
+      
+      <div className='max-w-7xl mx-auto px-4 md:px-6 h-24 flex items-center justify-between'>
 
         {/* LOGO */}
-        <Link href='/' className='flex flex-col leading-none'>
+        <Link href='/' className='flex flex-col justify-center'>
 
-          <h1 className='text-black text-2xl md:text-4xl font-black tracking-[2px] md:tracking-[4px] leading-none'>
+          <h1 className='text-black text-3xl md:text-5xl font-black tracking-[3px] md:tracking-[6px] leading-none'>
             XENTUM
           </h1>
 
-          <p className='text-gray-600 text-[8px] md:text-[11px] tracking-[2px] md:tracking-[3px] mt-1 font-medium uppercase'>
+          <p className='text-gray-500 text-[7px] md:text-[12px] tracking-[3px] md:tracking-[5px] mt-2 font-medium uppercase'>
             Brand Solutions Pvt. Ltd.
           </p>
 
@@ -68,6 +69,7 @@ export default function Navbar() {
       {/* MOBILE MENU */}
       {menuOpen && (
         <div className='lg:hidden bg-white border-t border-gray-200 shadow-xl'>
+          
           <div className='flex flex-col p-6 gap-5'>
 
             {navLinks.map((link) => (
@@ -90,6 +92,7 @@ export default function Navbar() {
             </a>
 
           </div>
+
         </div>
       )}
 
