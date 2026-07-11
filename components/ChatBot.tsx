@@ -96,14 +96,14 @@ export default function ChatBot() {
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className='fixed bottom-16 md:bottom-20 right-4 md:right-8 z-[999] bg-yellow-500 text-black p-4 rounded-full shadow-[0_10px_30px_rgba(245,183,0,0.35)] hover:scale-110 transition-all duration-300'
+          className='fixed bottom-8 md:bottom-10 right-4 md:right-8 z-[999] bg-yellow-500 text-black p-4 rounded-full shadow-[0_10px_30px_rgba(245,183,0,0.35)] hover:scale-110 transition-all duration-300'
         >
           <FaRobot size={32} />
         </button>
       )}
 
       {open && (
-        <div className='fixed bottom-16 md:bottom-20 right-4 left-4 md:left-auto md:right-8 md:w-[420px] h-[600px] bg-white border border-gray-200 rounded-[32px] shadow-[0_20px_60px_rgba(0,0,0,0.15)] z-[999] flex flex-col overflow-hidden'>
+        <div className='fixed bottom-8 md:bottom-10 right-4 left-4 md:left-auto md:right-8 md:w-[420px] h-[600px] bg-white border border-gray-200 rounded-[32px] shadow-[0_20px_60px_rgba(0,0,0,0.15)] z-[999] flex flex-col overflow-hidden'>
 
           <div className='flex items-center justify-between p-5 border-b border-gray-200'>
             <div>
@@ -177,7 +177,6 @@ export default function ChatBot() {
               Chat on WhatsApp
             </a>
           </div>
-
         </div>
       )}
     </>
