@@ -1,6 +1,38 @@
 'use client'
 
+import { useState } from 'react'
+
 export default function Contact() {
+
+  const [success, setSuccess] = useState(false)
+  const [loading, setLoading] = useState(false)
+
+const handleSubmit = async (e: any) => {
+  e.preventDefault()
+
+  setLoading(true)
+
+  const formData = new FormData(e.target)
+
+  const response = await fetch(
+    'https://formspree.io/f/mvzjnbne',
+    {
+      method: 'POST',
+      body: formData,
+      headers: {
+        Accept: 'application/json',
+      },
+    }
+  )
+
+  if (response.ok) {
+    setSuccess(true)
+    e.target.reset()
+  }
+
+  setLoading(false)
+}
+
   return (
     <section
       id='contact'
@@ -101,23 +133,11 @@ export default function Contact() {
           {/* FORM */}
           <div className='bg-white border border-gray-200 rounded-[32px] p-8 shadow-sm hover:shadow-2xl transition-all duration-500'>
 
-            <form
-  action='https://formspree.io/f/mvzjnbne'
-  method='POST'
+<form
+  onSubmit={handleSubmit}
   className='space-y-6'
 >
 
-  <input
-    type='hidden'
-    name='_subject'
-    value='New Lead From Xentum Website'
-  />
-
-  <input
-    type='hidden'
-    name='_next'
-    value='https://xentumbrandsolutions.com'
-  />
 
   <div>
     <label className='block font-semibold mb-3'>
@@ -175,11 +195,18 @@ export default function Contact() {
   </div>
 
   <button
-    type='submit'
-    className='w-full bg-yellow-500 text-black py-4 rounded-2xl text-lg font-bold hover:scale-[1.02] hover:shadow-[0_10px_30px_rgba(245,183,0,0.35)] transition-all duration-300'
-  >
-    Send Message
-  </button>
+  type='submit'
+  disabled={loading}
+  className='w-full bg-yellow-500 text-black py-4 rounded-2xl text-lg font-bold'
+>
+  {loading ? 'Sending...' : 'Send Message'}
+</button>
+
+{success && (
+  <div className='bg-green-100 text-green-700 p-4 rounded-xl text-center font-semibold'>
+    ✅ Thank you! Your message has been sent successfully.
+  </div>
+)}
 
 </form>
 
