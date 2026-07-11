@@ -30,17 +30,11 @@ export default function ChatBot() {
   const getBotReply = (message: string) => {
     const text = message.toLowerCase()
 
-    if (
-      text.includes('service') ||
-      text.includes('services')
-    ) {
+    if (text.includes('service') || text.includes('services')) {
       return 'We provide Branding, Digital Marketing, Corporate Events, Printing, Fabrication, Merchandising and Corporate Gifting solutions.'
     }
 
-    if (
-      text.includes('logo') ||
-      text.includes('logos')
-    ) {
+    if (text.includes('logo') || text.includes('logos')) {
       return 'Yes. We create professional logos, brand identities, packaging designs and complete branding solutions.'
     }
 
@@ -48,10 +42,7 @@ export default function ChatBot() {
       return 'We offer logo design, brand identity, retail branding, packaging and brand strategy.'
     }
 
-    if (
-      text.includes('event') ||
-      text.includes('events')
-    ) {
+    if (text.includes('event') || text.includes('events')) {
       return 'We execute exhibitions, conferences, corporate events and premium event production.'
     }
 
@@ -67,24 +58,15 @@ export default function ChatBot() {
       return 'We provide fabrication, exhibition stalls, signage and branding installations.'
     }
 
-    if (
-      text.includes('gift') ||
-      text.includes('gifting')
-    ) {
+    if (text.includes('gift') || text.includes('gifting')) {
       return 'We offer premium corporate gifting and customized merchandise solutions.'
     }
 
-    if (
-      text.includes('contact') ||
-      text.includes('phone')
-    ) {
+    if (text.includes('contact') || text.includes('phone')) {
       return 'Contact us at +91 9582460006 or email: abhishek.xentumbrandsolutions@gmail.com'
     }
 
-    if (
-      text.includes('price') ||
-      text.includes('cost')
-    ) {
+    if (text.includes('price') || text.includes('cost')) {
       return 'Pricing depends on project requirements. Please contact our team for a custom quotation.'
     }
 
@@ -104,11 +86,7 @@ export default function ChatBot() {
       text: getBotReply(input),
     }
 
-    setMessages((prev) => [
-      ...prev,
-      userMessage,
-      botMessage,
-    ])
+    setMessages((prev) => [...prev, userMessage, botMessage])
 
     setInput('')
   }
@@ -118,17 +96,16 @@ export default function ChatBot() {
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className='fixed bottom-40 md:bottom-44 right-4 md:right-8 z-[999] bg-yellow-500 text-black p-4 rounded-full shadow-[0_10px_30px_rgba(245,183,0,0.35)] hover:scale-110 transition-all duration-300'
+          className='fixed bottom-16 md:bottom-20 right-4 md:right-8 z-[999] bg-yellow-500 text-black p-4 rounded-full shadow-[0_10px_30px_rgba(245,183,0,0.35)] hover:scale-110 transition-all duration-300'
         >
           <FaRobot size={32} />
         </button>
       )}
 
       {open && (
-        <div className='fixed bottom-40 md:bottom-44 right-4 left-4 md:left-auto md:right-8 md:w-[420px] h-[600px] bg-white border border-gray-200 rounded-[32px] shadow-[0_20px_60px_rgba(0,0,0,0.15)] z-[999] flex flex-col overflow-hidden'>
+        <div className='fixed bottom-16 md:bottom-20 right-4 left-4 md:left-auto md:right-8 md:w-[420px] h-[600px] bg-white border border-gray-200 rounded-[32px] shadow-[0_20px_60px_rgba(0,0,0,0.15)] z-[999] flex flex-col overflow-hidden'>
 
           <div className='flex items-center justify-between p-5 border-b border-gray-200'>
-
             <div>
               <h3 className='text-xl font-bold text-yellow-500'>
                 Xentum Assistant
@@ -148,11 +125,9 @@ export default function ChatBot() {
                 className='text-gray-700 hover:text-red-500'
               />
             </button>
-
           </div>
 
           <div className='flex-1 p-5 overflow-y-auto space-y-4'>
-
             {messages.map((msg, index) => (
               <div
                 key={index}
@@ -167,13 +142,10 @@ export default function ChatBot() {
             ))}
 
             <div ref={messagesEndRef} />
-
           </div>
 
           <div className='p-4 border-t border-gray-200'>
-
             <div className='flex gap-2 mb-3'>
-
               <input
                 type='text'
                 value={input}
@@ -193,7 +165,6 @@ export default function ChatBot() {
               >
                 Send
               </button>
-
             </div>
 
             <a
@@ -205,7 +176,6 @@ export default function ChatBot() {
               <FaWhatsapp />
               Chat on WhatsApp
             </a>
-
           </div>
 
         </div>
