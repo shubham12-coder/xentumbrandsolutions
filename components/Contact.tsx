@@ -263,34 +263,42 @@ const handleSubmit = async (e: any) => {
 
           </div>
 
-<div className='bg-white rounded-[32px] p-10 mb-8 text-center shadow-lg border border-gray-100'>
+<div className='bg-white rounded-[32px] p-8 mb-8 shadow-lg border border-gray-100'>
 
-  <div className='text-4xl mb-4'>
-    📍
+  <div className='flex flex-col md:flex-row items-center justify-between gap-8'>
+
+    <div className='text-center md:text-left'>
+
+      <h4 className='text-3xl font-bold text-yellow-500 mb-4'>
+        📍 Office Address
+      </h4>
+
+      <p className='text-gray-700 text-lg leading-relaxed'>
+        Intellect Design Arena Limited
+        <br />
+        249, Phase IV, Udyog Vihar
+        <br />
+        Sector 19, Gurugram
+        <br />
+        Haryana 122015
+      </p>
+
+    </div>
+
+    <div>
+
+      <a
+        href='https://maps.app.goo.gl/ybg71XqeGcMQ9J9U9'
+        target='_blank'
+        rel='noopener noreferrer'
+        className='inline-flex items-center gap-2 bg-yellow-500 text-black px-8 py-4 rounded-xl font-bold hover:scale-105 transition-all duration-300'
+      >
+        📍 Get Directions
+      </a>
+
+    </div>
+
   </div>
-
-  <h4 className='text-3xl font-bold text-yellow-500 mb-4'>
-    Office Address
-  </h4>
-
-  <p className='text-gray-700 text-lg leading-relaxed mb-6'>
-    Intellect Design Arena Limited
-    <br />
-    249, Phase IV, Udyog Vihar
-    <br />
-    Sector 19, Gurugram
-    <br />
-    Haryana 122015
-  </p>
-
-  <a
-    href='https://maps.app.goo.gl/ybg71XqeGcMQ9J9U9'
-    target='_blank'
-    rel='noopener noreferrer'
-    className='inline-block bg-yellow-500 text-black px-6 py-3 rounded-xl font-bold hover:scale-105 transition-all duration-300'
-  >
-    📍 Get Directions
-  </a>
 
 </div>
 
