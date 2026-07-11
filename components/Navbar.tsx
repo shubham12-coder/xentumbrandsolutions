@@ -25,12 +25,12 @@ export default function Navbar() {
         {/* LOGO */}
         <Link href='/' className='flex flex-col justify-center'>
 
-          <h1 className='text-black text-2xl md:text-4xl font-black tracking-[2px] md:tracking-[4px] leading-none'>
-            XENTUM
+        <h1 className='text-black text-2xl md:text-4xl font-black tracking-[2px] md:tracking-[4px] leading-none'>
+         XENTUM
           </h1>
 
-          <p className='text-gray-500 text-[6px] md:text-[8px] tracking-[2px] md:tracking-[3px] mt-1 font-medium uppercase'>
-            Brand Solutions Pvt. Ltd.
+        <p className='text-gray-500 text-[6px] md:text-[8px] tracking-[4px] mt-1 uppercase text-center'>
+         Brand Solutions Pvt. Ltd.
           </p>
 
         </Link>
