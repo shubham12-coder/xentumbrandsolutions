@@ -263,12 +263,17 @@ const handleSubmit = async (e: any) => {
 
           </div>
 
-<div className='bg-gray-50 border border-gray-200 rounded-[24px] p-6 mb-8 text-center'>
-  <h4 className='text-2xl font-bold text-yellow-500 mb-3'>
+<div className='bg-white rounded-[32px] p-10 mb-8 text-center shadow-lg border border-gray-100'>
+
+  <div className='text-4xl mb-4'>
+    📍
+  </div>
+
+  <h4 className='text-3xl font-bold text-yellow-500 mb-4'>
     Office Address
   </h4>
 
-  <p className='text-gray-700 text-lg leading-relaxed'>
+  <p className='text-gray-700 text-lg leading-relaxed mb-6'>
     Intellect Design Arena Limited
     <br />
     249, Phase IV, Udyog Vihar
@@ -277,6 +282,16 @@ const handleSubmit = async (e: any) => {
     <br />
     Haryana 122015
   </p>
+
+  <a
+    href='https://maps.google.com/?q=249+Phase+IV+Udyog+Vihar+Sector+19+Gurugram'
+    target='_blank'
+    rel='noopener noreferrer'
+    className='inline-block bg-yellow-500 text-black px-6 py-3 rounded-xl font-bold hover:scale-105 transition-all duration-300'
+  >
+    📍 Get Directions
+  </a>
+
 </div>
 
           <div className='overflow-hidden rounded-[32px] border border-gray-200 shadow-xl'>
