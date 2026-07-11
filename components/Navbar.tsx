@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <header className='fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200 shadow-sm'>
       
-      <div className='max-w-7xl mx-auto px-4 md:px-6 h-24 flex items-center justify-between'>
+      <div className='max-w-7xl mx-auto px-4 md:px-6 h-20 flex items-center justify-between'>
 
         {/* LOGO */}
         <Link href='/' className='flex flex-col justify-center'>
