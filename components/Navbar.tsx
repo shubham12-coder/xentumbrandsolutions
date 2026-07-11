@@ -19,18 +19,18 @@ export default function Navbar() {
 
   return (
     <header className='fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200 shadow-sm'>
-      
-      <div className='max-w-7xl mx-auto px-4 md:px-6 h-20 flex items-center justify-between'>
+
+      <div className='max-w-7xl mx-auto px-4 md:px-6 h-16 md:h-20 flex items-center justify-between'>
 
         {/* LOGO */}
         <Link href='/' className='flex flex-col justify-center'>
 
-        <h1 className='text-black text-2xl md:text-4xl font-black tracking-[2px] md:tracking-[4px] leading-none'>
-         XENTUM
+          <h1 className='text-black text-xl md:text-4xl font-black tracking-[2px] md:tracking-[4px] leading-none'>
+            XENTUM
           </h1>
 
-        <p className='text-gray-500 text-[6px] md:text-[8px] tracking-[4px] mt-1 uppercase text-center'>
-         Brand Solutions Pvt. Ltd.
+          <p className='text-gray-500 text-[5px] md:text-[8px] tracking-[2px] md:tracking-[4px] mt-1 uppercase text-center'>
+            Brand Solutions Pvt. Ltd.
           </p>
 
         </Link>
@@ -61,7 +61,7 @@ export default function Navbar() {
           onClick={() => setMenuOpen(!menuOpen)}
           className='lg:hidden text-black'
         >
-          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+          {menuOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
 
       </div>
@@ -69,7 +69,7 @@ export default function Navbar() {
       {/* MOBILE MENU */}
       {menuOpen && (
         <div className='lg:hidden bg-white border-t border-gray-200 shadow-xl'>
-          
+
           <div className='flex flex-col p-6 gap-5'>
 
             {navLinks.map((link) => (
