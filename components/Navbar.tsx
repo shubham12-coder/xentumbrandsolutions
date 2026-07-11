@@ -18,29 +18,29 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className='fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-2xl border-b border-gray-200/70 shadow-sm'>
-      <div className='max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between'>
+    <header className='fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200 shadow-sm'>
+      <div className='max-w-7xl mx-auto px-4 md:px-6 h-20 flex items-center justify-between'>
 
         {/* LOGO */}
         <Link href='/' className='flex flex-col leading-none'>
 
-          <h1 className='text-black text-3xl md:text-5xl font-black tracking-[2px] md:tracking-[4px] leading-none'>
+          <h1 className='text-black text-2xl md:text-4xl font-black tracking-[2px] md:tracking-[4px] leading-none'>
             XENTUM
           </h1>
 
-          <p className='text-black text-[8px] md:text-[12px] tracking-[1.5px] md:tracking-[3px] mt-1 font-medium'>
-            BRAND SOLUTIONS PVT. LTD.
+          <p className='text-gray-600 text-[8px] md:text-[11px] tracking-[2px] md:tracking-[3px] mt-1 font-medium uppercase'>
+            Brand Solutions Pvt. Ltd.
           </p>
 
         </Link>
 
         {/* DESKTOP MENU */}
-        <nav className='hidden lg:flex items-center gap-8'>
+        <nav className='hidden lg:flex items-center gap-7'>
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className='text-black/80 hover:text-[#F5B700] transition-all duration-300 font-medium hover:-translate-y-0.5'
+              className='text-black/80 hover:text-yellow-500 transition-all duration-300 font-medium'
             >
               {link.name}
             </a>
@@ -60,7 +60,7 @@ export default function Navbar() {
           onClick={() => setMenuOpen(!menuOpen)}
           className='lg:hidden text-black'
         >
-          {menuOpen ? <X size={30} /> : <Menu size={30} />}
+          {menuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
 
       </div>
@@ -75,7 +75,7 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className='text-black text-lg'
+                className='text-black text-lg font-medium'
               >
                 {link.name}
               </a>
@@ -83,6 +83,7 @@ export default function Navbar() {
 
             <a
               href='#contact'
+              onClick={() => setMenuOpen(false)}
               className='bg-yellow-500 text-black text-center py-3 rounded-full font-bold'
             >
               Let's Talk

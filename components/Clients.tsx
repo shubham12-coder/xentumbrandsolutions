@@ -15,12 +15,12 @@ export default function Clients() {
   return (
     <section
       id="clients"
-      className="py-24 md:py-32 bg-white text-black"
+      className="py-16 md:py-20 bg-white text-black"
     >
       <div className="max-w-7xl mx-auto px-4 md:px-6">
 
         {/* HEADING */}
-        <div className="text-center mb-20 md:mb-24">
+        <div className="text-center mb-12">
 
           <p className="text-yellow-500 uppercase tracking-[6px] mb-4 text-sm font-semibold">
             Trusted By

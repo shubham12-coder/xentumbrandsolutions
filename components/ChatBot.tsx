@@ -15,7 +15,7 @@ export default function ChatBot() {
     },
     {
       sender: 'bot',
-      text: 'Ask us about branding, events, fabrication, printing or marketing.',
+      text: 'How can we help you today? Ask about Branding, Events, Printing, Fabrication, Marketing or Corporate Gifting.',
     },
   ])
 
@@ -88,7 +88,7 @@ export default function ChatBot() {
       return 'Pricing depends on project requirements. Please contact our team for a custom quotation.'
     }
 
-    return 'Thank you for contacting Xentum. Please share your requirement and our team will assist you shortly.'
+    return 'Thank you for contacting Xentum. For faster assistance, please click the WhatsApp button below and our team will connect with you.'
   }
 
   const handleSend = () => {
@@ -125,7 +125,7 @@ export default function ChatBot() {
       )}
 
       {open && (
-        <div className='fixed bottom-24 md:bottom-28 right-4 left-4 md:left-auto md:right-8 md:w-[420px] h-[520px] bg-white border border-gray-200 rounded-[32px] shadow-[0_20px_60px_rgba(0,0,0,0.15)] z-[999] flex flex-col overflow-hidden'>
+        <div className='fixed bottom-24 md:bottom-28 right-4 left-4 md:left-auto md:right-8 md:w-[420px] h-[600px] bg-white border border-gray-200 rounded-[32px] shadow-[0_20px_60px_rgba(0,0,0,0.15)] z-[999] flex flex-col overflow-hidden'>
 
           <div className='flex items-center justify-between p-5 border-b border-gray-200'>
 
@@ -134,8 +134,8 @@ export default function ChatBot() {
                 Xentum Assistant
               </h3>
 
-              <p className='text-gray-500 text-sm'>
-                Online Now
+              <p className='text-green-500 text-sm font-medium'>
+                ● Online Now
               </p>
             </div>
 

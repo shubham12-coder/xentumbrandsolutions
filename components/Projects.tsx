@@ -32,13 +32,13 @@ export default function Projects() {
   return (
     <section
       id='projects'
-      className='py-24 md:py-32 bg-white text-black'
+      className='py-16 md:py-20 bg-white text-black'
     >
       <Reveal>
         <div className='max-w-7xl mx-auto px-4 md:px-6'>
 
           {/* HEADING */}
-          <div className='text-center mb-20 md:mb-24'>
+          <div className='text-center mb-12 md:mb-16'>
             <p className='text-yellow-500 uppercase tracking-[6px] mb-4 text-sm font-semibold'>
               Our Projects
             </p>
@@ -53,12 +53,12 @@ export default function Projects() {
           </div>
 
           {/* PROJECT GRID */}
-          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
 
             {projects.map((project, index) => (
               <div
                 key={index}
-                className='group bg-white border border-gray-200 rounded-[32px] overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-3 hover:border-yellow-500 transition-all duration-500'
+                className='group bg-white border border-gray-200 rounded-[32px] overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:border-yellow-500 transition-all duration-500'
               >
 
                 {/* IMAGE */}

@@ -17,7 +17,7 @@ export default function Hero() {
   return (
     <section
       id='home'
-      className='relative min-h-screen flex items-center justify-center overflow-hidden bg-white pt-32'
+      className='relative min-h-screen flex items-center justify-center overflow-hidden bg-white pt-24'
     >
       {/* FLOATING BACKGROUND LOGO — decorative only, hidden from screen readers,
           and paused for anyone who has motion sensitivity turned on */}
@@ -77,7 +77,7 @@ export default function Hero() {
 
           {/* Animated Counters — each one fades/rises into place with a small
               stagger instead of all four popping in at once */}
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 md:mt-24'>
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mt-14 md:mt-16'>
             {STATS.map((stat, i) => (
               <motion.div
                 key={stat.label}

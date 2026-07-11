@@ -8,10 +8,10 @@ export default function About() {
   return (
     <section
       id='about'
-      className='py-14 md:py-18 bg-white text-black'
+      className='py-16 md:py-20 bg-white text-black'
     >
       <Reveal>
-        <div className='max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center'>
+        <div className='max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center'>
 
           {/* IMAGE */}
           <div className='relative w-full h-[250px] sm:h-[320px] md:h-[400px] rounded-3xl overflow-hidden border border-gray-200 shadow-sm'>

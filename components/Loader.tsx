@@ -32,7 +32,7 @@ export default function Loader({
             transition={{
               duration: 1.5,
             }}
-            className='text-6xl md:text-[85px] lg:text-[125px] font-black text-black tracking-[12px]'
+            className='text-5xl md:text-[75px] lg:text-[110px] font-black text-black tracking-[10px]'
           >
             XENTUM
           </motion.h1>
@@ -52,13 +52,13 @@ export default function Loader({
             transition={{
               duration: 1.5,
             }}
-            className='mt-2 text-[10px] md:text-[16px] lg:text-[22px] font-semibold tracking-[6px] text-gray-600 uppercase'
+            className='mt-1 text-[10px] md:text-[14px] lg:text-[18px] font-semibold tracking-[4px] text-gray-600 uppercase'
           >
             BRAND SOLUTIONS PVT. LTD.
           </motion.p>
 
           {/* Loading Bar */}
-          <div className='mt-8 w-64 md:w-[380px] h-[6px] bg-gray-200 rounded-full overflow-hidden'>
+          <div className='mt-8 w-56 md:w-[320px] h-[4px] bg-gray-200 rounded-full overflow-hidden'>
 
             <motion.div
               initial={{ x: '-100%' }}
@@ -68,7 +68,7 @@ export default function Loader({
                 duration: 1.2,
                 ease: 'linear',
               }}
-              className='h-full w-28 bg-yellow-500'
+              className='h-full w-20 bg-yellow-500 rounded-full'
             />
 
           </div>
