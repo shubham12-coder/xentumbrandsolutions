@@ -3,12 +3,12 @@ import Image from 'next/image'
 export default function Achievements() {
   return (
     <section
-      id='achievements'
-      className='py-24 bg-black text-white'
-    >
+  id='achievements'
+  className='py-16 md:py-20 bg-black text-white'
+>
       <div className='max-w-7xl mx-auto px-6'>
 
-        <div className='text-center mb-20'>
+        <div className='text-center mb-12'>
           <p className='text-yellow-500 uppercase tracking-[5px] mb-4 text-sm'>
             Achievements
           </p>
