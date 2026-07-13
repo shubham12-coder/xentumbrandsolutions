@@ -16,8 +16,10 @@ export const metadata: Metadata = {
   title: "Xentum Brand Solutions Pvt. Ltd.",
   description:
     "Premium Branding, Marketing, Corporate Events, Fabrication, Printing, Merchandising and Corporate Gifting Solutions.",
+
   keywords: [
     "Xentum",
+    "Xentum Brand Solutions",
     "Branding",
     "Marketing",
     "Corporate Events",
@@ -27,6 +29,20 @@ export const metadata: Metadata = {
     "Merchandising",
     "Brand Solutions",
   ],
+
+  verification: {
+    google: "LKnpSpjD5yojdkZvh0Atza5P82QalbLLnFPm-D1pRSo",
+  },
+
+  openGraph: {
+    title: "Xentum Brand Solutions Pvt. Ltd.",
+    description:
+      "Premium Branding, Marketing, Corporate Events, Fabrication, Printing, Merchandising and Corporate Gifting Solutions.",
+    url: "https://xentumbrandsolutions.vercel.app",
+    siteName: "Xentum Brand Solutions",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
