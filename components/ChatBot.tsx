@@ -96,7 +96,7 @@ export default function ChatBot() {
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className='fixed bottom-10 md:bottom-14 right-4 md:right-8 z-[999] bg-yellow-500 text-black w-16 h-16 flex items-center justify-center rounded-full shadow-[0_10px_30px_rgba(245,183,0,0.35)] hover:scale-110 transition-all duration-300'
+          className='fixed bottom-4 md:bottom-8 right-4 md:right-8 z-[999] bg-yellow-500 text-black w-16 h-16 flex items-center justify-center rounded-full shadow-[0_10px_30px_rgba(245,183,0,0.35)] hover:scale-110 transition-all duration-300'
         >
           <FaRobot size={30} />
         </button>
