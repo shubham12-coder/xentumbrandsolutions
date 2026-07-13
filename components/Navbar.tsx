@@ -23,13 +23,13 @@ export default function Navbar() {
       <div className='max-w-7xl mx-auto px-4 md:px-6 h-16 md:h-20 flex items-center justify-between'>
 
         {/* LOGO */}
-        <Link href='/' className='flex flex-col justify-center'>
+        <Link href='/' className='inline-flex flex-col items-center'>
 
           <h1 className='text-black text-xl md:text-4xl font-black tracking-[2px] md:tracking-[4px] leading-none'>
             XENTUM
           </h1>
 
-          <p className='text-gray-500 text-[5px] md:text-[8px] tracking-[2px] md:tracking-[4px] mt-1 uppercase text-center'>
+          <p className='text-gray-500 text-[5px] md:text-[8px] tracking-[0.5px] md:tracking-[1px] mt-1 uppercase whitespace-nowrap'>
             Brand Solutions Pvt. Ltd.
           </p>
 
