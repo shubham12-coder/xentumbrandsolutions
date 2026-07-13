@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react'
 import Loader from '../components/Loader'
 import ChatBot from '../components/ChatBot'
 import WhatsAppButton from '../components/WhatsAppButton'
+import CallButton from '../components/CallButton'
+
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import Services from '../components/Services'
@@ -49,9 +51,10 @@ export default function Home() {
 
           <Contact />
 
+          {/* Floating Buttons */}
           <ChatBot />
-
           <WhatsAppButton />
+          <CallButton />
 
           <Footer />
 
