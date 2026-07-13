@@ -29,7 +29,7 @@ export default function Navbar() {
             XENTUM
           </h1>
 
-          <p className='text-gray-500 text-[5px] md:text-[7px] tracking-[0px] mt-0.5 uppercase whitespace-nowrap'>
+          <p className='w-[170px] md:w-[330px] text-center text-gray-500 text-[5px] md:text-[7px] tracking-[1px] md:tracking-[3px] mt-0.5 uppercase'>
             Brand Solutions Pvt. Ltd.
           </p>
 
