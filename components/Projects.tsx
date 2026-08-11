@@ -16,7 +16,7 @@ const projects = [
     title: 'Branding',
     description:
       'Premium branding and creative visual identity solutions.',
-    image: '/images/projects/branding/b1.jpeg',
+    image: '/images/projects/branding/b2.jpeg',
     link: '/projects/branding',
   },
   {
