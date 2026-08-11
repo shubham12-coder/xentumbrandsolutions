@@ -11,8 +11,7 @@ const images = [
   '/images/projects/gifting/q2.jpeg',
   '/images/projects/gifting/h1.jpeg',
   '/images/projects/gifting/q4.png',
-  '/images/projects/gifting/g5.jpeg',
-  '/images/projects/gifting/g6.jpeg',
+  '/images/projects/gifting/m1.jpeg',
 ]
 
 export default function MerchandisingGiftingPage() {

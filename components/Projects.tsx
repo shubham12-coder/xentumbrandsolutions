@@ -9,7 +9,7 @@ const projects = [
     title: 'Merchandising & Corporate Gifting',
     description:
       'Premium merchandising, gifting and branded corporate solutions.',
-    image: '/images/projects/gifting/h1.jpeg',
+    image: '/images/projects/gifting/m1.jpeg',
     link: '/projects/merchandising-gifting',
   },
   {
