@@ -207,9 +207,9 @@ export default function Hero() {
               bottom-0
               hidden
               lg:block
-              w-[550px]
-              xl:w-[670px]
-              2xl:w-[750px]
+              w-[590px]
+              xl:w-[720px]
+              2xl:w-[800px]
               pointer-events-none
               z-20
             "
