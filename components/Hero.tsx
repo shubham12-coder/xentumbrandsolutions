@@ -20,9 +20,7 @@ export default function Hero() {
       className="relative min-h-screen overflow-hidden bg-white pt-24"
     >
 
-      {/* =========================================
-          BACKGROUND XENTUM LOGO
-      ========================================== */}
+      {/* BACKGROUND XENTUM LOGO */}
       <div
         className="absolute inset-0 flex items-center justify-center pointer-events-none"
         aria-hidden="true"
@@ -39,143 +37,51 @@ export default function Hero() {
             repeat: Infinity,
             ease: 'easeInOut',
           }}
-          className="
-            w-[70%]
-            max-w-[900px]
-            opacity-[0.035]
-          "
+          className="w-[70%] max-w-[900px] opacity-[0.035]"
         />
       </div>
 
 
-      {/* =========================================
-          MAIN CONTAINER
-      ========================================== */}
-      <div
-        className="
-          relative
-          z-10
-          max-w-[1500px]
-          mx-auto
-          px-6
-          lg:px-10
-        "
-      >
+      {/* MAIN CONTAINER */}
+      <div className="relative z-10 max-w-[1500px] mx-auto px-6 lg:px-10">
 
-        <div
-          className="
-            min-h-[calc(100vh-96px)]
-            flex
-            items-center
-            relative
-          "
-        >
+        <div className="min-h-[calc(100vh-96px)] flex items-center">
 
-          {/* =========================================
-              LEFT CONTENT
-          ========================================== */}
-          <div
-            className="
-              w-full
-              lg:w-[60%]
-              xl:w-[61%]
-              relative
-              z-10
-            "
-          >
+          {/* LEFT CONTENT */}
+          <div className="w-full lg:w-[64%]">
 
             <Reveal>
 
               {/* TAGLINE */}
-              <p
-                className="
-                  text-yellow-500
-                  uppercase
-                  tracking-[6px]
-                  mb-6
-                  text-sm
-                  md:text-base
-                  font-semibold
-                "
-              >
+              <p className="text-yellow-500 uppercase tracking-[6px] mb-6 text-sm md:text-base font-semibold">
                 Innovate — Execute — Elevate
               </p>
 
 
-              {/* =====================================
-                  MAIN HEADING
-              ====================================== */}
-              <h1
-                className="
-                  text-black
-                  font-black
-                  leading-[0.95]
-                  mb-8
-                "
-              >
+              {/* MAIN HEADING */}
+              <h1 className="text-black font-black leading-[0.95] mb-8">
 
-                <span
-                  className="
-                    block
-                    text-5xl
-                    sm:text-6xl
-                    md:text-7xl
-                    lg:text-[72px]
-                    xl:text-[82px]
-                  "
-                >
+                <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-[72px] xl:text-[82px]">
                   Building Brands
                 </span>
 
-                <span
-                  className="
-                    block
-                    text-yellow-500
-                    text-5xl
-                    sm:text-6xl
-                    md:text-7xl
-                    lg:text-[72px]
-                    xl:text-[82px]
-                    mt-3
-                  "
-                >
+                <span className="block text-yellow-500 text-5xl sm:text-6xl md:text-7xl lg:text-[72px] xl:text-[82px] mt-3">
                   That Deliver.
                 </span>
 
               </h1>
 
 
-              {/* =====================================
-                  DESCRIPTION
-              ====================================== */}
-              <p
-                className="
-                  max-w-[820px]
-                  text-base
-                  md:text-lg
-                  lg:text-xl
-                  text-gray-600
-                  leading-relaxed
-                  mb-9
-                "
-              >
+              {/* DESCRIPTION */}
+              <p className="max-w-[800px] text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed mb-9">
                 XENTUM delivers premium branding, MICE events, merchandising,
                 event management, fabrication, printing and marketing solutions
                 designed for modern businesses and enterprise growth.
               </p>
 
 
-              {/* =====================================
-                  BUTTONS
-              ====================================== */}
-              <div
-                className="
-                  flex
-                  flex-wrap
-                  items-center
-                  gap-5
-                "
-              >
+              {/* BUTTONS */}
+              <div className="flex flex-wrap items-center gap-5">
 
                 <Link href="/services">
                   <button
@@ -225,20 +131,8 @@ export default function Hero() {
               </div>
 
 
-              {/* =====================================
-                  STATS
-              ====================================== */}
-              <div
-                className="
-                  grid
-                  grid-cols-2
-                  md:grid-cols-4
-                  gap-x-8
-                  gap-y-6
-                  mt-10
-                  max-w-[820px]
-                "
-              >
+              {/* STATS */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-6 mt-10 max-w-[820px]">
 
                 {STATS.map((stat, i) => (
 
@@ -260,21 +154,10 @@ export default function Hero() {
                       delay: 0.15 + i * 0.1,
                       ease: [0.22, 1, 0.36, 1],
                     }}
-                    className="
-                      hover:-translate-y-2
-                      transition-transform
-                      duration-300
-                    "
+                    className="hover:-translate-y-2 transition-transform duration-300"
                   >
 
-                    <h3
-                      className="
-                        text-3xl
-                        md:text-4xl
-                        font-black
-                        text-yellow-500
-                      "
-                    >
+                    <h3 className="text-3xl md:text-4xl font-black text-yellow-500">
                       <CountUp
                         end={stat.end}
                         duration={2}
@@ -284,14 +167,7 @@ export default function Hero() {
                       {stat.suffix}
                     </h3>
 
-                    <p
-                      className="
-                        text-gray-600
-                        mt-2
-                        text-sm
-                        md:text-base
-                      "
-                    >
+                    <p className="text-gray-600 mt-2 text-sm md:text-base">
                       {stat.label}
                     </p>
 
@@ -307,14 +183,12 @@ export default function Hero() {
 
 
           {/* =========================================
-              CORPORATE MAN
-              RIGHT-SIDE DEDICATED AREA
+              CORPORATE MAN — LARGE RIGHT SIDE
           ========================================== */}
-
           <motion.div
             initial={{
               opacity: 0,
-              x: 80,
+              x: 100,
             }}
             whileInView={{
               opacity: 1,
@@ -328,17 +202,14 @@ export default function Hero() {
               ease: [0.22, 1, 0.36, 1],
             }}
             className="
-              hidden
-              lg:flex
               absolute
-              right-0
-              top-0
+              right-[-90px]
               bottom-0
-              w-[40%]
-              xl:w-[41%]
-              2xl:w-[42%]
-              items-end
-              justify-end
+              hidden
+              lg:block
+              w-[560px]
+              xl:w-[680px]
+              2xl:w-[760px]
               pointer-events-none
               z-20
             "
@@ -348,19 +219,14 @@ export default function Hero() {
               src="/images/hero/hero-man.png"
               alt="Xentum corporate professional"
               className="
-                h-[94%]
-                xl:h-[97%]
-                2xl:h-[100%]
-                w-auto
-                max-w-none
+                w-full
+                h-auto
                 object-contain
                 object-bottom
-                object-right
               "
             />
 
           </motion.div>
-
 
         </div>
 
@@ -370,7 +236,6 @@ export default function Hero() {
       {/* =========================================
           MOBILE CORPORATE MAN
       ========================================== */}
-
       <motion.div
         initial={{
           opacity: 0,
