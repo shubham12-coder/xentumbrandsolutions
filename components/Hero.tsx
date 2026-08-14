@@ -203,13 +203,13 @@ export default function Hero() {
             }}
             className="
               absolute
-              right-[-90px]
+              right-[20px]
               bottom-0
               hidden
               lg:block
-              w-[560px]
-              xl:w-[680px]
-              2xl:w-[760px]
+              w-[520px]
+              xl:w-[630px]
+              2xl:w-[700px]
               pointer-events-none
               z-20
             "
