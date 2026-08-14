@@ -19,8 +19,8 @@ export default function Hero() {
       id='home'
       className='relative min-h-screen flex items-center justify-center overflow-hidden bg-white pt-24'
     >
-      {/* FLOATING BACKGROUND LOGO — decorative only, hidden from screen readers,
-          and paused for anyone who has motion sensitivity turned on */}
+
+      {/* FLOATING BACKGROUND LOGO */}
       <div
         className='absolute inset-0 flex items-center justify-center pointer-events-none'
         aria-hidden='true'
@@ -41,26 +41,60 @@ export default function Hero() {
         />
       </div>
 
+
+      {/* CORPORATE MAN — RIGHT SIDE */}
+      <motion.div
+        initial={{ opacity: 0, x: 80 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.9,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+        className='absolute right-0 bottom-0 z-20 hidden lg:block pointer-events-none'
+      >
+        <img
+          src='/images/hero/hero-man.png'
+          alt='Corporate professional'
+          className='w-[360px] xl:w-[430px] h-auto object-contain'
+        />
+      </motion.div>
+
+
+      {/* MAIN CONTENT */}
       <Reveal>
         <div className='relative z-10 max-w-7xl mx-auto px-4 md:px-6 text-center'>
+
           <p className='text-yellow-500 uppercase tracking-[6px] mb-6 text-sm font-semibold'>
             Innovate — Execute — Elevate
           </p>
 
-          {/* Headline switched to the brand's own tagline (from the Xentum flyer)
-              so the hero and the print collateral say the same thing. */}
+
+          {/* HEADLINE */}
           <h1 className='text-black text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black leading-tight mb-8'>
-            <span className='block mb-4'>Building Brands</span>
-            <span className='block text-yellow-500'>That Deliver.</span>
+
+            <span className='block mb-4'>
+              Building Brands
+            </span>
+
+            <span className='block text-yellow-500'>
+              That Deliver.
+            </span>
+
           </h1>
 
+
+          {/* DESCRIPTION */}
           <p className='max-w-4xl mx-auto text-base md:text-xl text-gray-600 leading-relaxed mb-10'>
             XENTUM delivers premium branding, MICE events, merchandising,
             event management, fabrication, printing and marketing solutions
             designed for modern businesses and enterprise growth.
           </p>
 
+
+          {/* BUTTONS */}
           <div className='flex flex-col sm:flex-row items-center justify-center gap-5'>
+
             <Link href='/services'>
               <button className='bg-yellow-500 text-black px-8 py-4 rounded-full font-bold flex items-center gap-3 hover:scale-105 transition-all duration-300 shadow-sm'>
                 Explore Services
@@ -73,30 +107,62 @@ export default function Hero() {
                 View Projects
               </button>
             </Link>
+
           </div>
 
-          {/* Animated Counters — each one fades/rises into place with a small
-              stagger instead of all four popping in at once */}
+
+          {/* STATS */}
           <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mt-14 md:mt-16'>
+
             {STATS.map((stat, i) => (
+
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.15 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                initial={{
+                  opacity: 0,
+                  y: 20,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.15 + i * 0.1,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
                 className='hover:-translate-y-2 transition-transform duration-300'
               >
+
                 <h3 className='text-4xl font-black text-yellow-500'>
-                  <CountUp end={stat.end} duration={2} enableScrollSpy scrollSpyOnce />
+
+                  <CountUp
+                    end={stat.end}
+                    duration={2}
+                    enableScrollSpy
+                    scrollSpyOnce
+                  />
+
                   {stat.suffix}
+
                 </h3>
-                <p className='text-gray-600 mt-2'>{stat.label}</p>
+
+                <p className='text-gray-600 mt-2'>
+                  {stat.label}
+                </p>
+
               </motion.div>
+
             ))}
+
           </div>
+
         </div>
       </Reveal>
+
     </section>
   )
 }
