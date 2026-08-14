@@ -17,12 +17,10 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden bg-white pt-24"
+      className="relative min-h-screen overflow-hidden bg-white pt-24"
     >
 
-      {/* =========================
-          BACKGROUND XENTUM LOGO
-      ========================== */}
+      {/* BACKGROUND XENTUM LOGO */}
       <div
         className="absolute inset-0 flex items-center justify-center pointer-events-none"
         aria-hidden="true"
@@ -39,188 +37,217 @@ export default function Hero() {
             repeat: Infinity,
             ease: 'easeInOut',
           }}
-          className="w-[70%] max-w-[900px] opacity-[0.04] motion-reduce:animate-none"
+          className="w-[70%] max-w-[900px] opacity-[0.035]"
         />
       </div>
 
-      {/* =========================
-          HERO CONTENT
-      ========================== */}
-      <Reveal>
-        <div className="relative z-10 w-full max-w-[1500px] mx-auto px-6 md:px-10 lg:px-14">
+
+      {/* MAIN CONTAINER */}
+      <div className="relative z-10 max-w-[1500px] mx-auto px-6 lg:px-10">
+
+        <div className="min-h-[calc(100vh-96px)] flex items-center">
 
           {/* LEFT CONTENT */}
-          <div className="w-full lg:w-[68%]">
+          <div className="w-full lg:w-[64%]">
 
-            {/* TAGLINE */}
-            <p className="text-yellow-500 uppercase tracking-[6px] mb-7 text-sm md:text-base font-semibold">
-              Innovate — Execute — Elevate
-            </p>
+            <Reveal>
 
-            {/* HEADLINE */}
-            <h1 className="text-black font-black leading-[0.95] mb-8">
+              {/* TAGLINE */}
+              <p className="text-yellow-500 uppercase tracking-[6px] mb-6 text-sm md:text-base font-semibold">
+                Innovate — Execute — Elevate
+              </p>
 
-              <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[7.5rem]">
-                Building Brands
-              </span>
 
-              <span className="block text-yellow-500 text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[7.5rem] mt-4">
-                That Deliver.
-              </span>
+              {/* MAIN HEADING */}
+              <h1 className="text-black font-black leading-[0.95] mb-8">
 
-            </h1>
+                <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-[72px] xl:text-[82px]">
+                  Building Brands
+                </span>
 
-            {/* DESCRIPTION */}
-            <p className="max-w-[950px] text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed mb-10">
-              XENTUM delivers premium branding, MICE events, merchandising,
-              event management, fabrication, printing and marketing solutions
-              designed for modern businesses and enterprise growth.
-            </p>
+                <span className="block text-yellow-500 text-5xl sm:text-6xl md:text-7xl lg:text-[72px] xl:text-[82px] mt-3">
+                  That Deliver.
+                </span>
 
-            {/* BUTTONS */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
+              </h1>
 
-              <Link href="/services">
-                <button
-                  className="
-                    bg-yellow-500
-                    text-black
-                    px-8
-                    py-4
-                    rounded-full
-                    font-bold
-                    flex
-                    items-center
-                    gap-3
-                    hover:scale-105
-                    transition-all
-                    duration-300
-                    shadow-md
-                  "
-                >
-                  Explore Services
-                  <ArrowRight size={20} />
-                </button>
-              </Link>
 
-              <Link href="/projects">
-                <button
-                  className="
-                    bg-white
-                    border
-                    border-gray-300
-                    px-8
-                    py-4
-                    rounded-full
-                    text-black
-                    font-semibold
-                    hover:bg-yellow-500
-                    hover:border-yellow-500
-                    transition-all
-                    duration-300
-                  "
-                >
-                  View Projects
-                </button>
-              </Link>
+              {/* DESCRIPTION */}
+              <p className="max-w-[800px] text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed mb-9">
+                XENTUM delivers premium branding, MICE events, merchandising,
+                event management, fabrication, printing and marketing solutions
+                designed for modern businesses and enterprise growth.
+              </p>
 
-            </div>
 
-            {/* =========================
-                STATS
-            ========================== */}
-            <div
-              className="
-                grid
-                grid-cols-2
-                md:grid-cols-4
-                gap-x-6
-                gap-y-6
-                mt-10
-                max-w-[780px]
-              "
-            >
+              {/* BUTTONS */}
+              <div className="flex flex-wrap items-center gap-5">
 
-              {STATS.map((stat, i) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{
-                    opacity: 0,
-                    y: 20,
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  viewport={{
-                    once: true,
-                  }}
-                  transition={{
-                    duration: 0.6,
-                    delay: 0.15 + i * 0.1,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
-                  className="
-                    hover:-translate-y-2
-                    transition-transform
-                    duration-300
-                  "
-                >
+                <Link href="/services">
+                  <button
+                    className="
+                      bg-yellow-500
+                      text-black
+                      px-8
+                      py-4
+                      rounded-full
+                      font-bold
+                      flex
+                      items-center
+                      gap-3
+                      hover:scale-105
+                      transition-all
+                      duration-300
+                      shadow-sm
+                    "
+                  >
+                    Explore Services
+                    <ArrowRight size={20} />
+                  </button>
+                </Link>
 
-                  <h3 className="text-4xl md:text-5xl font-black text-yellow-500">
-                    <CountUp
-                      end={stat.end}
-                      duration={2}
-                      enableScrollSpy
-                      scrollSpyOnce
-                    />
-                    {stat.suffix}
-                  </h3>
 
-                  <p className="text-gray-600 mt-2 text-sm md:text-base">
-                    {stat.label}
-                  </p>
+                <Link href="/projects">
+                  <button
+                    className="
+                      bg-white
+                      border
+                      border-gray-300
+                      px-8
+                      py-4
+                      rounded-full
+                      text-black
+                      font-semibold
+                      hover:bg-yellow-500
+                      hover:border-yellow-500
+                      transition-all
+                      duration-300
+                    "
+                  >
+                    View Projects
+                  </button>
+                </Link>
 
-                </motion.div>
-              ))}
+              </div>
 
-            </div>
+
+              {/* STATS */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-6 mt-10 max-w-[820px]">
+
+                {STATS.map((stat, i) => (
+
+                  <motion.div
+                    key={stat.label}
+                    initial={{
+                      opacity: 0,
+                      y: 20,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                    }}
+                    viewport={{
+                      once: true,
+                    }}
+                    transition={{
+                      duration: 0.6,
+                      delay: 0.15 + i * 0.1,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                    className="hover:-translate-y-2 transition-transform duration-300"
+                  >
+
+                    <h3 className="text-3xl md:text-4xl font-black text-yellow-500">
+                      <CountUp
+                        end={stat.end}
+                        duration={2}
+                        enableScrollSpy
+                        scrollSpyOnce
+                      />
+                      {stat.suffix}
+                    </h3>
+
+                    <p className="text-gray-600 mt-2 text-sm md:text-base">
+                      {stat.label}
+                    </p>
+
+                  </motion.div>
+
+                ))}
+
+              </div>
+
+            </Reveal>
 
           </div>
 
-        </div>
-      </Reveal>
 
-      {/* =========================
-          CORPORATE MAN
-      ========================== */}
+          {/* CORPORATE MAN — RIGHT SIDE */}
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: 100,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              duration: 1,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="
+              absolute
+              right-[-10px]
+              bottom-0
+              hidden
+              lg:block
+              w-[420px]
+              xl:w-[520px]
+              2xl:w-[600px]
+              pointer-events-none
+            "
+          >
+
+            <img
+              src="/images/hero/hero-man.png"
+              alt="Xentum corporate professional"
+              className="w-full h-auto object-contain object-bottom"
+            />
+
+          </motion.div>
+
+        </div>
+
+      </div>
+
+
+      {/* MOBILE CORPORATE MAN */}
       <motion.div
         initial={{
           opacity: 0,
-          x: 100,
+          y: 40,
         }}
         whileInView={{
           opacity: 1,
-          x: 0,
+          y: 0,
         }}
         viewport={{
           once: true,
         }}
         transition={{
-          duration: 1,
-          ease: [0.22, 1, 0.36, 1],
+          duration: 0.8,
         }}
         className="
-          absolute
-          right-[-25px]
-          bottom-0
-          hidden
-          lg:block
-          w-[470px]
-          xl:w-[570px]
-          2xl:w-[650px]
-          pointer-events-none
-          z-20
+          lg:hidden
+          flex
+          justify-center
+          mt-8
+          relative
+          z-10
         "
       >
 
@@ -228,10 +255,10 @@ export default function Hero() {
           src="/images/hero/hero-man.png"
           alt="Xentum corporate professional"
           className="
-            w-full
+            w-[280px]
+            sm:w-[340px]
             h-auto
             object-contain
-            object-bottom
           "
         />
 
