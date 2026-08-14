@@ -17,12 +17,28 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen overflow-hidden bg-white pt-24"
+      className="
+        relative
+        min-h-screen
+        overflow-hidden
+        bg-white
+        pt-24
+      "
     >
 
-      {/* BACKGROUND XENTUM LOGO */}
+      {/* =================================
+          BACKGROUND XENTUM LOGO
+      ================================= */}
       <div
-        className="absolute inset-0 flex items-center justify-center pointer-events-none"
+        className="
+          absolute
+          inset-0
+          flex
+          items-center
+          justify-center
+          pointer-events-none
+          z-0
+        "
         aria-hidden="true"
       >
         <motion.img
@@ -37,53 +53,153 @@ export default function Hero() {
             repeat: Infinity,
             ease: 'easeInOut',
           }}
-          className="w-[70%] max-w-[900px] opacity-[0.035]"
+          className="
+            w-[70%]
+            max-w-[900px]
+            opacity-[0.035]
+          "
         />
       </div>
 
 
-      {/* MAIN CONTAINER */}
-      <div className="relative z-10 max-w-[1500px] mx-auto px-6 lg:px-10">
+      {/* =================================
+          MAIN HERO CONTAINER
+      ================================= */}
+      <div
+        className="
+          relative
+          z-10
+          w-full
+          max-w-[1600px]
+          mx-auto
+          px-8
+          lg:px-12
+          xl:px-16
+        "
+      >
 
-        <div className="min-h-[calc(100vh-96px)] flex items-center">
+        <div
+          className="
+            relative
+            min-h-[calc(100vh-96px)]
+            flex
+            items-center
+          "
+        >
 
-          {/* LEFT CONTENT */}
-          <div className="w-full lg:w-[64%]">
 
-            <Reveal>
+          {/* =================================
+              LEFT CONTENT
+          ================================= */}
+          <Reveal>
+
+            <div
+              className="
+                relative
+                z-20
+                w-full
+                lg:w-[64%]
+                xl:w-[63%]
+                pb-8
+              "
+            >
 
               {/* TAGLINE */}
-              <p className="text-yellow-500 uppercase tracking-[6px] mb-6 text-sm md:text-base font-semibold">
+              <p
+                className="
+                  text-yellow-500
+                  uppercase
+                  tracking-[6px]
+                  mb-7
+                  text-sm
+                  md:text-base
+                  font-semibold
+                "
+              >
                 Innovate — Execute — Elevate
               </p>
 
 
-              {/* MAIN HEADING */}
-              <h1 className="text-black font-black leading-[0.95] mb-8">
+              {/* =================================
+                  MAIN HEADING
+              ================================= */}
+              <h1
+                className="
+                  text-black
+                  font-black
+                  leading-[0.94]
+                  mb-8
+                "
+              >
 
-                <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-[72px] xl:text-[82px]">
+                <span
+                  className="
+                    block
+                    text-5xl
+                    sm:text-6xl
+                    md:text-7xl
+                    lg:text-[76px]
+                    xl:text-[86px]
+                    2xl:text-[92px]
+                  "
+                >
                   Building Brands
                 </span>
 
-                <span className="block text-yellow-500 text-5xl sm:text-6xl md:text-7xl lg:text-[72px] xl:text-[82px] mt-3">
+                <span
+                  className="
+                    block
+                    text-yellow-500
+                    text-5xl
+                    sm:text-6xl
+                    md:text-7xl
+                    lg:text-[76px]
+                    xl:text-[86px]
+                    2xl:text-[92px]
+                    mt-4
+                  "
+                >
                   That Deliver.
                 </span>
 
               </h1>
 
 
-              {/* DESCRIPTION */}
-              <p className="max-w-[800px] text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed mb-9">
+              {/* =================================
+                  DESCRIPTION
+              ================================= */}
+              <p
+                className="
+                  max-w-[850px]
+                  text-base
+                  md:text-lg
+                  lg:text-xl
+                  xl:text-[21px]
+                  text-gray-600
+                  leading-[1.7]
+                  mb-9
+                "
+              >
                 XENTUM delivers premium branding, MICE events, merchandising,
                 event management, fabrication, printing and marketing solutions
                 designed for modern businesses and enterprise growth.
               </p>
 
 
-              {/* BUTTONS */}
-              <div className="flex flex-wrap items-center gap-5">
+              {/* =================================
+                  BUTTONS
+              ================================= */}
+              <div
+                className="
+                  flex
+                  flex-wrap
+                  items-center
+                  gap-5
+                "
+              >
 
                 <Link href="/services">
+
                   <button
                     className="
                       bg-yellow-500
@@ -104,10 +220,12 @@ export default function Hero() {
                     Explore Services
                     <ArrowRight size={20} />
                   </button>
+
                 </Link>
 
 
                 <Link href="/projects">
+
                   <button
                     className="
                       bg-white
@@ -126,13 +244,26 @@ export default function Hero() {
                   >
                     View Projects
                   </button>
+
                 </Link>
 
               </div>
 
 
-              {/* STATS */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-6 mt-10 max-w-[820px]">
+              {/* =================================
+                  STATS
+              ================================= */}
+              <div
+                className="
+                  grid
+                  grid-cols-2
+                  md:grid-cols-4
+                  gap-x-7
+                  gap-y-6
+                  mt-10
+                  max-w-[820px]
+                "
+              >
 
                 {STATS.map((stat, i) => (
 
@@ -154,20 +285,39 @@ export default function Hero() {
                       delay: 0.15 + i * 0.1,
                       ease: [0.22, 1, 0.36, 1],
                     }}
-                    className="hover:-translate-y-2 transition-transform duration-300"
+                    className="
+                      hover:-translate-y-2
+                      transition-transform
+                      duration-300
+                    "
                   >
 
-                    <h3 className="text-3xl md:text-4xl font-black text-yellow-500">
+                    <h3
+                      className="
+                        text-3xl
+                        md:text-4xl
+                        font-black
+                        text-yellow-500
+                      "
+                    >
                       <CountUp
                         end={stat.end}
                         duration={2}
                         enableScrollSpy
                         scrollSpyOnce
                       />
+
                       {stat.suffix}
                     </h3>
 
-                    <p className="text-gray-600 mt-2 text-sm md:text-base">
+                    <p
+                      className="
+                        text-gray-600
+                        mt-2
+                        text-sm
+                        md:text-base
+                      "
+                    >
                       {stat.label}
                     </p>
 
@@ -177,16 +327,18 @@ export default function Hero() {
 
               </div>
 
-            </Reveal>
+            </div>
 
-          </div>
+          </Reveal>
 
 
-          {/* CORPORATE MAN — RIGHT SIDE */}
+          {/* =================================
+              CORPORATE MAN — DESKTOP
+          ================================= */}
           <motion.div
             initial={{
               opacity: 0,
-              x: 100,
+              x: 80,
             }}
             whileInView={{
               opacity: 1,
@@ -201,31 +353,40 @@ export default function Hero() {
             }}
             className="
               absolute
-              right-[-10px]
-              bottom-0
+              right-[-35px]
+              bottom-[-1px]
               hidden
               lg:block
-              w-[420px]
-              xl:w-[520px]
-              2xl:w-[600px]
+              w-[560px]
+              xl:w-[650px]
+              2xl:w-[720px]
               pointer-events-none
+              z-30
             "
           >
 
             <img
               src="/images/hero/hero-man.png"
               alt="Xentum corporate professional"
-              className="w-full h-auto object-contain object-bottom"
+              className="
+                w-full
+                h-auto
+                object-contain
+                object-bottom
+              "
             />
 
           </motion.div>
+
 
         </div>
 
       </div>
 
 
-      {/* MOBILE CORPORATE MAN */}
+      {/* =================================
+          MOBILE MAN
+      ================================= */}
       <motion.div
         initial={{
           opacity: 0,
@@ -245,9 +406,9 @@ export default function Hero() {
           lg:hidden
           flex
           justify-center
-          mt-8
+          mt-6
           relative
-          z-10
+          z-20
         "
       >
 
@@ -255,8 +416,8 @@ export default function Hero() {
           src="/images/hero/hero-man.png"
           alt="Xentum corporate professional"
           className="
-            w-[280px]
-            sm:w-[340px]
+            w-[300px]
+            sm:w-[380px]
             h-auto
             object-contain
           "
