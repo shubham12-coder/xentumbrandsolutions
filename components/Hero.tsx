@@ -182,7 +182,9 @@ export default function Hero() {
           </div>
 
 
-          {/* CORPORATE MAN — RIGHT SIDE */}
+          {/* =========================================
+              CORPORATE MAN — LARGE RIGHT SIDE
+          ========================================== */}
           <motion.div
             initial={{
               opacity: 0,
@@ -201,21 +203,27 @@ export default function Hero() {
             }}
             className="
               absolute
-              right-[-10px]
+              right-[-90px]
               bottom-0
               hidden
               lg:block
-              w-[420px]
-              xl:w-[520px]
-              2xl:w-[600px]
+              w-[560px]
+              xl:w-[680px]
+              2xl:w-[760px]
               pointer-events-none
+              z-20
             "
           >
 
             <img
               src="/images/hero/hero-man.png"
               alt="Xentum corporate professional"
-              className="w-full h-auto object-contain object-bottom"
+              className="
+                w-full
+                h-auto
+                object-contain
+                object-bottom
+              "
             />
 
           </motion.div>
@@ -225,7 +233,9 @@ export default function Hero() {
       </div>
 
 
-      {/* MOBILE CORPORATE MAN */}
+      {/* =========================================
+          MOBILE CORPORATE MAN
+      ========================================== */}
       <motion.div
         initial={{
           opacity: 0,
