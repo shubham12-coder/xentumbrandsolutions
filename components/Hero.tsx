@@ -20,7 +20,7 @@ export default function Hero() {
       className="relative min-h-screen overflow-hidden bg-white pt-24"
     >
 
-      {/* Background XENTUM Logo */}
+      {/* BACKGROUND XENTUM LOGO */}
       <div
         className="absolute inset-0 flex items-center justify-center pointer-events-none"
         aria-hidden="true"
@@ -42,12 +42,13 @@ export default function Hero() {
       </div>
 
 
-      {/* MAIN HERO CONTENT */}
+      {/* MAIN CONTAINER */}
       <div className="relative z-10 max-w-[1500px] mx-auto px-6 lg:px-10">
 
         <div className="min-h-[calc(100vh-96px)] flex items-center">
 
-          <div className="w-full lg:w-[68%]">
+          {/* LEFT CONTENT */}
+          <div className="w-full lg:w-[64%]">
 
             <Reveal>
 
@@ -57,14 +58,14 @@ export default function Hero() {
               </p>
 
 
-              {/* HEADLINE */}
+              {/* MAIN HEADING */}
               <h1 className="text-black font-black leading-[0.95] mb-8">
 
-                <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-[88px] xl:text-[100px]">
+                <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-[72px] xl:text-[82px]">
                   Building Brands
                 </span>
 
-                <span className="block text-yellow-500 text-5xl sm:text-6xl md:text-7xl lg:text-[88px] xl:text-[100px] mt-3">
+                <span className="block text-yellow-500 text-5xl sm:text-6xl md:text-7xl lg:text-[72px] xl:text-[82px] mt-3">
                   That Deliver.
                 </span>
 
@@ -72,7 +73,7 @@ export default function Hero() {
 
 
               {/* DESCRIPTION */}
-              <p className="max-w-[850px] text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed mb-9">
+              <p className="max-w-[800px] text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed mb-9">
                 XENTUM delivers premium branding, MICE events, merchandising,
                 event management, fabrication, printing and marketing solutions
                 designed for modern businesses and enterprise growth.
@@ -131,7 +132,7 @@ export default function Hero() {
 
 
               {/* STATS */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-7 mt-12 max-w-[850px]">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-6 mt-10 max-w-[820px]">
 
                 {STATS.map((stat, i) => (
 
@@ -151,6 +152,7 @@ export default function Hero() {
                     transition={{
                       duration: 0.6,
                       delay: 0.15 + i * 0.1,
+                      ease: [0.22, 1, 0.36, 1],
                     }}
                     className="hover:-translate-y-2 transition-transform duration-300"
                   >
@@ -199,13 +201,13 @@ export default function Hero() {
             }}
             className="
               absolute
-              right-[-20px]
+              right-[-10px]
               bottom-0
               hidden
               lg:block
-              w-[360px]
-              xl:w-[460px]
-              2xl:w-[520px]
+              w-[420px]
+              xl:w-[520px]
+              2xl:w-[600px]
               pointer-events-none
             "
           >
@@ -213,12 +215,7 @@ export default function Hero() {
             <img
               src="/images/hero/hero-man.png"
               alt="Xentum corporate professional"
-              className="
-                w-full
-                h-auto
-                object-contain
-                object-bottom
-              "
+              className="w-full h-auto object-contain object-bottom"
             />
 
           </motion.div>
@@ -228,7 +225,7 @@ export default function Hero() {
       </div>
 
 
-      {/* MOBILE MAN */}
+      {/* MOBILE CORPORATE MAN */}
       <motion.div
         initial={{
           opacity: 0,
@@ -244,13 +241,25 @@ export default function Hero() {
         transition={{
           duration: 0.8,
         }}
-        className="lg:hidden flex justify-center mt-6 relative z-10"
+        className="
+          lg:hidden
+          flex
+          justify-center
+          mt-8
+          relative
+          z-10
+        "
       >
 
         <img
           src="/images/hero/hero-man.png"
           alt="Xentum corporate professional"
-          className="w-[280px] sm:w-[340px] h-auto object-contain"
+          className="
+            w-[280px]
+            sm:w-[340px]
+            h-auto
+            object-contain
+          "
         />
 
       </motion.div>
