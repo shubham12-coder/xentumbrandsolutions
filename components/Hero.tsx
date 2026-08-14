@@ -48,7 +48,7 @@ export default function Hero() {
         <div className="min-h-[calc(100vh-96px)] flex items-center">
 
           {/* LEFT CONTENT */}
-          <div className="w-full lg:w-[64%]">
+          <div className="w-full lg:w-[64%] lg:pl-8 xl:pl-12">
 
             <Reveal>
 
